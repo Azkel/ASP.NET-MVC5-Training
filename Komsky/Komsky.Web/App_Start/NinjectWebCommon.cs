@@ -11,6 +11,8 @@ namespace Komsky.Web.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Data.DataAccess.UnitOfWork;
+    using Services.Handlers;
+    using Domain.Models;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -62,6 +64,7 @@ namespace Komsky.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDataFacade>().To<DataFacade>();
+            kernel.Bind<IBaseHandler<CustomerDomain>>().To<CustomerHandler>();
         }        
     }
 }

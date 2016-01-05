@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace Komsky.Data.Entities
 {
@@ -7,6 +8,8 @@ namespace Komsky.Data.Entities
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public virtual DbSet<Customer> Customers { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -16,5 +19,6 @@ namespace Komsky.Data.Entities
         {
             return new ApplicationDbContext();
         }
+        
     }
 }

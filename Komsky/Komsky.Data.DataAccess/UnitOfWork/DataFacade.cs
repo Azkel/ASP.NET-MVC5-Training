@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Komsky.Data.DataAccess.Repositories;
 using Komsky.Data.Entities;
@@ -13,6 +10,7 @@ namespace Komsky.Data.DataAccess.UnitOfWork
         #region Fields
         private ApplicationDbContext _dbContext;
         private ApplicationUserRepository _applicationUsers;
+        private CustomerRepository _customerRepository;
         #endregion
 
         #region Constructors
@@ -36,6 +34,14 @@ namespace Komsky.Data.DataAccess.UnitOfWork
             get
             {
                 return _applicationUsers ?? (_applicationUsers = new ApplicationUserRepository(_dbContext));
+            }
+        }
+
+        public CustomerRepository Customers
+        {
+            get
+            {
+                return _customerRepository ?? (_customerRepository = new CustomerRepository(_dbContext));
             }
         }
 

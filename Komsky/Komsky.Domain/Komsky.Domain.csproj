@@ -40,7 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\CustomerDomainFactory.cs" />
+    <Compile Include="Factories\CustomerFactory.cs" />
+    <Compile Include="Models\CustomerDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Komsky.Data.Entities\Komsky.Data.Entities.csproj">
+      <Project>{d6c9aee2-da0f-4a1a-bc4d-7ea343b95393}</Project>
+      <Name>Komsky.Data.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

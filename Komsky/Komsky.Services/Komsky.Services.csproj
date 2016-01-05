@@ -101,6 +101,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\BaseHandler.cs" />
+    <Compile Include="Handlers\CustomerHandler.cs" />
+    <Compile Include="Handlers\IBaseHandler.cs" />
     <Compile Include="IdentityConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -113,11 +116,16 @@
       <Project>{d6c9aee2-da0f-4a1a-bc4d-7ea343b95393}</Project>
       <Name>Komsky.Data.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Komsky.Domain\Komsky.Domain.csproj">
+      <Project>{d112df93-5083-44c1-93c9-0032c8aae5fa}</Project>
+      <Name>Komsky.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
