@@ -10,7 +10,10 @@ namespace Komsky.Domain.Factories
             return new CustomerDomain
             {
                 Id = customer.Id,
-                Name = customer.Name
+                Name = customer.Name,
+                Email = customer.Email,
+                Phone = customer.Phone,
+                PIN = customer.PIN
             };
         }
 

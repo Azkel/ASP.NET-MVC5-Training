@@ -13,7 +13,10 @@ namespace Komsky.Web.Models.Factories
             return new CustomerDomain
             {
                 Id = customerViewModel.Id,
-                Name = customerViewModel.Name
+                Name = customerViewModel.Name,
+                Email = customerViewModel.Email,
+                Phone = customerViewModel.Phone,
+                PIN = customerViewModel.PIN
             };
         }
 

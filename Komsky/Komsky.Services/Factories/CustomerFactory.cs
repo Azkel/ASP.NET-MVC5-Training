@@ -15,7 +15,11 @@ namespace Komsky.Domain.Factories
             return new Customer
             {
                 Id = customerDomain.Id,
-                Name = customerDomain.Name
+                Name = customerDomain.Name,
+                Email = customerDomain.Email,
+                Phone = customerDomain.Phone,
+                PIN = customerDomain.PIN
+                //Products = customerDomain.Products.GetAll().Select(ProductFactory.Create);
             };
         }
 

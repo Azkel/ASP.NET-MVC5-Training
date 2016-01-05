@@ -11,6 +11,7 @@ namespace Komsky.Data.DataAccess.UnitOfWork
         private ApplicationDbContext _dbContext;
         private ApplicationUserRepository _applicationUsers;
         private CustomerRepository _customerRepository;
+        private ProductRepository _productRepository;
         #endregion
 
         #region Constructors
@@ -42,6 +43,14 @@ namespace Komsky.Data.DataAccess.UnitOfWork
             get
             {
                 return _customerRepository ?? (_customerRepository = new CustomerRepository(_dbContext));
+            }
+        }
+
+        public ProductRepository Products
+        {
+            get
+            {
+                return _productRepository ?? (_productRepository = new ProductRepository(_dbContext));
             }
         }
 

@@ -9,6 +9,7 @@ namespace Komsky.Data.Entities
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

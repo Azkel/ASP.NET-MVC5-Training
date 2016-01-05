@@ -101,9 +101,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\CustomerDomainFactory.cs" />
+    <Compile Include="Factories\CustomerFactory.cs" />
+    <Compile Include="Factories\ProductDomainFactory.cs" />
+    <Compile Include="Factories\ProductFactory.cs" />
     <Compile Include="Handlers\BaseHandler.cs" />
     <Compile Include="Handlers\CustomerHandler.cs" />
     <Compile Include="Handlers\IBaseHandler.cs" />
+    <Compile Include="Handlers\ProductHandler.cs" />
     <Compile Include="IdentityConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
